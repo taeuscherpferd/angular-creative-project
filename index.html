@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudFlare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <input type="text" ng-model="form" ng-keyup="onup(form)">
+    <div>
+      {{response}}
+    </div>
+  </div>
+</body>
+
+</html>
