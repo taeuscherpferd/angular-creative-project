@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudFlare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,42 +10,77 @@
 </head>
 
 <body>
+  <div class="bgimg">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand navbar-brand-centered">Dad Joke Generator</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar"> </div>
+      </div>
+    </nav>
+
     <div class="container-fluid">
       <div ng-app="myApp" ng-controller="myCtrl">
-        <div class ="row">
-          <div class = "col-xs-12" align="center">
-            <h4>Dad Joke Generator</h4>
-          <img src="calvin.png">
+        <div class="row">
+          <div class="col-xs-12" align="center">
+            <h4></h4>
+            <img src="calvin.png">
           </div>
         </div>
-           <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      <div class = "row">
-        <div class ="col-xs-6" align="center">
-          
-          <p>Get a dad joke that includes your word!</p>
-          <input type="text" ng-model="form" ng-keyup="onup(form)">
-          <div ng-repeat="joke in jokes">
-            {{joke}}
+        <!-- <div class="row">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-3" align="center">
+            <h1 style="font-weight: bold; background-color:white;">Get a dad joke that includes your word!</h1>
+            <input type="text" ng-model="form" ng-keyup="onup(form)">
+            <div ng-repeat="joke in jokes">
+              {{joke}}
+            </div>
           </div>
-        </div>
-        
-        <div class = "col-xs-6" align="center">
-          
+          <div class="col-xs-3" align="center">
             <button ng-model="button" ng-click="onclick(button)" type='submit'>Random Dad Joke</button>
             <div>
               {{randomJoke}}
             </div>
+          </div>
+          <div class="col-xs-3"> </div>
+        </div> -->
+        <div class="col-xs-12" align="center">
+          <h1 class="rounded-background-color" style="font-weight: bold; display: inline;">Get a dad joke that includes
+            your word, or
+            generate a random one instead!</h1>
         </div>
-        
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-3" align="center">
+            <input type="text" ng-model="form" ng-keyup="onup(form)" class="rounded-background-color">
+            <br>
+            <br>
+            <div class="rounded-background-color">
+              <div ng-repeat="joke in jokes" style="text-align: left; padding-left: 10px;">
+                {{joke}}
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3" align="center">
+            <button class="rounded-background-color" ng-model="button" ng-click="onclick(button)" type='submit'>Random
+              Dad Joke</button>
+            <br>
+            <br>
+            <div class="rounded-background-color">
+              {{randomJoke}}
+            </div>
+          </div>
+          <div class="col-xs-3"></div>
         </div>
       </div>
     </div>
+  </div>
 </body>
 
 </html>
